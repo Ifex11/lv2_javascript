@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // -Number.parsent()
+  // -Number.parseFloat()
+  // -Number.isNAN()
+  // -Number.isinteger()
+  // -Number.isInfinite()
+
+  // let number =5.453
+
+  // //numbers methods
+  // console.log(number.toFixed(4));
+
+  // let number =5
+
+  // //numbers methods
+  // console.log(number.toFixed(3));
+
+  // let number =5.457
+
+  // //numbers methods
+  // console.log(number.toFixed(2));
+
+  //Number.isinfinite
+  let number = 5.1266;
+  //number method
+  console.log(number.toFixed(3)); //5.127
+  console.log(number.toPrecision(3)); //5.13
+  let number2 = 2045;
+  // console.log(number2.toFixed(3));
+
+  console.log(typeof number2);
+  console.log(typeof number2.toPrecision(3));
+  console.log(number2.toPrecision(3));
+
+  let number3 = 12.345;
+  // Number.parseInt(parseInt)
+  console.log(Number.parseInt("12.345")); //12
+  console.log(Number.parseInt("12.9")); //12
+  console.log(Number.parseInt("124567abc")); //1234567
+  console.log(Number.parseInt("123abc456")); //123
+  console.log(Number.parseInt("abc")); //NaN
+
+  //parseFloat(Number.parseFloat)
+  console.log(Number.parseFloat("12.345")); //12.345 
+  console.log(Number.parseFloat("12.9")); //12.9
+  console.log(Number.parseFloat("124567abc")); //124567
+  console.log(Number.parseFloat("123abc456")); //123
+  console.log(Number.parseFloat("abc")); //NaN
+
+  console.log(Number.isInteger(12.56)); //false
+  console.log(Number.isInteger(120)); //true
+
+  //console.log(typeof NAN)
+  console.log(Number("12345")); // 12345
+  console.log(parseInt("12345abc")); // 12345
+  console.log(parseInt("a12345abc")); // NaN
+  console.log(Number("12345abc")); // NaN
+
+  console.log(+"12345abc"); // NaN
+  console.log(+"12345"); // 12345
+
+  console.log(Number.isNaN(NaN)); //True
+  console.log(Number.isNaN("abc")); //false
+</script>
