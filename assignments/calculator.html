@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        body{
+            .calculator{
+                input{}
+                div{}
+            }
+            .operators{
+                button{}
+            }
+            .screen{}
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" placeholder="0" id="numField1">
+        <div id="operator"><span id="show">?</span></div>
+        <input type="text" placeholder="0" id="numField2">
+    </div>
+    <div class="operators">
+        <button onclick="divide()">/</button>
+        <button id="mul" onclick="multiply()">*</button>
+        <button id="add" onclick="add()">+</button>
+        <button id="sub" onclick="subtract()">-</button>
+        <button id="mod" onclick="modulus()">%</button>
+        <button id="pow" onclick="pow()">^</button>
+    </div>
+    <div class="screen" id="result"></div>
+</body>
+<script>
+    let numField1 = document.getElementById('numField1')
+    let numField2 = document.getElementById('numField2')
+    let resultScreen = document.getElementById('result')
+    let operator =  document.getElementById('show')
+
+    function divide(){
+        let num1 = +numField1.value;
+        let num2 = +numField2.value;
+
+        let result = num1 / num2
+        resultScreen.innerHTML = result
+        show.innerHTML = '/'
+    }
+
+    function multiply(){
+        let num1 = +numField1.value;
+        let num2 = +numField2.value;
+
+        let result = num1 * num2
+        resultScreen.innerHTML = result
+           show.innerHTML = 'x'
+    }
+
+    function add(){
+        let num1 = +numField1.value;
+        let num2 = +numField2.value;
+
+        let result = num1 + num2
+        resultScreen.innerHTML = result
+           show.innerHTML = '+'
+    }
+
+    function subtract(){
+        let num1 = +numField1.value;
+        let num2 = +numField2.value;
+
+        let result = num1 - num2
+        resultScreen.innerHTML = result
+           show.innerHTML = '-'
+    }
+
+    function modulus(){
+        let num1 = +numField1.value;
+        let num2 = +numField2.value;
+
+        let result = num1 % num2
+        resultScreen.innerHTML = result
+           show.innerHTML = '%'
+    }
+
+    function pow(){
+        let num1 = +numField1.value;
+        let num2 = +numField2.value;
+
+        let result = num1 ** num2
+        resultScreen.innerHTML = result
+           show.innerHTML = '^'
+    }
+</script>
+</html>

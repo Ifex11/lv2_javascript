@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splitword</title>
+    <style>
+      body{
+        background-color: gainsboro;
+        display: flex;
+        flex-direction: column;
+        align-items: center ;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        h1{
+          font-weight: 600;
+          color: #6f8;
+        }
+        .split{
+          border: 2px solid peru;
+          input{
+            outline: none;
+            padding: 8px 4px;
+            border: none;
+            font-size: 17px;
+          }
+          button{
+            font-style: oblique;
+            font-size: 18px;
+            font-weight: 600;
+            color: brown;
+            background-color: transparent;
+          }
+        }
+      }
+    </style>
+</head>
+<body>
+  <h1>Split word</h1>
+    <div class="split">
+     <input type="text" id="enter" placeholder="Enter a word">
+     <button onclick="splitWord()">Split</button>
+    </div> 
+    <div id="output"></div>
+</body>
+</html>
+<script>
+    let input = document.getElementById('enter')
+
+    let resultField = document.getElementById('output')
+
+    function splitWord() {
+        let inputField = input.value;
+        let word = inputField.trim()
+
+        let middle = Math.floor(word.length / 2);//Math.trunc
+
+        let firsthalf = word.substring(0,middle)
+        let secondhalf = word.substring(middle)
+
+        resultField.innerHTML = `${firsthalf} + ${secondhalf}`
+    }
+</script>

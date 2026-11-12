@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correction</title>
+</head>
+<body>
+    <input type="text" id="number1">
+    <input type="text" id="number2">
+    <button onclick="generateRandomnumber()">Generate random number</button>
+</body>
+</html>
+<script>
+    let num1=document.getElementById('number1')
+    let num2=document.getElementById('number2')
+
+    function generateRandomnumber() {
+
+        // let num1= num1.value//min
+        // let num2= num2.value//max
+
+        // let randomNumber =(Math.random()*9);//0-8.999#
+        // let finalRandomNumber = randomNumber+2;//2-10.999
+
+        // console.log(Math.floor(finalRandomNumber)); //2-10
+
+        //let number = 10
+
+        //10-2=8
+        
+        let maxNo = 10
+        let minNo = 2
+
+        let diff = maxNo - minNo//8
+        
+        let randomNumber = (Math.random()*diff)//0-7.999
+
+        randomNumber = Math.ceil(randomNumber)//0-8 
+        
+    }
+
+</script>

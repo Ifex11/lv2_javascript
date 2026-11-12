@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5-11-2026</title>
+</head>
+<body>
+    <input type="text" id="firstInput">
+    <input type="text" id="secondInput">
+    <button onclick="generate()">Submit</button>
+</body>
+</html>
+<script>
+
+
+    function generate() {
+       let firstInput = Number(document.getElementById("firstInput").value);
+       let secondInput = Number(document.getElementById("secondInput").value);
+
+    let min = Math.min(firstInput , secondInput);
+    let max = Math.max(firstInput , secondInput);
+
+    let randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+
+        // console.log(firstInput);
+        // console.log(secondInput);
+        // console.log(min);
+        // console.log(max);
+        console.log(randomNumber);
+    }
+</script>
