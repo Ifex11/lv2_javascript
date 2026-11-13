@@ -9,6 +9,7 @@
     <input type="text" id="firstInput">
     <input type="text" id="secondInput">
     <button onclick="generate()">Submit</button>
+    <div id="output"></div>
 </body>
 </html>
 <script>
@@ -28,5 +29,6 @@
         // console.log(min);
         // console.log(max);
         console.log(randomNumber);
+        output.innerHTML = randomNumber
     }
 </script>
